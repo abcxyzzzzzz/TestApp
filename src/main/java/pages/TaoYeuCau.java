@@ -1,5 +1,6 @@
 package pages;
 
+import core.BaseTest;
 import helper.locator;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -7,8 +8,8 @@ import org.openqa.selenium.By;
 
 import java.util.concurrent.TimeUnit;
 
-public class TaoYeuCau {
-    public static void TaoYeuCau(AppiumDriver<MobileElement> driver) throws Exception {
+public class TaoYeuCau extends BaseTest {
+    public static void TaoYeuCau() throws Exception {
         MobileElement skipButton = driver.findElement(locator.SkipButton);
         skipButton.click();
         driver.findElement(locator.DienSDT).click();

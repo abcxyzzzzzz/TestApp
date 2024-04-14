@@ -15,5 +15,6 @@ public class locator {
     public static final By ChonHinhAnh = By.xpath("//android.widget.ImageView[@resource-id=\"com.android.documentsui:id/icon_thumb\"]");
     public static final By GuiYeuCau = By.xpath("//android.widget.Button[@content-desc=\"Create issue\"]");
     public static final By DongYeuCau = By.xpath("//android.widget.Button[@content-desc=\"Close\"]");
+    public static final By LichSuYeuCau = By.xpath("//android.view.View[@content-desc=\"History\"]");
 
 }

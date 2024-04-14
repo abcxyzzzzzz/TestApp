@@ -1,16 +1,19 @@
 package RunTest;
 
 import core.BaseTest;
-import helper.locator;
-import io.appium.java_client.MobileElement;
 import org.testng.annotations.Test;
 import pages.TaoYeuCau;
-
-import java.util.concurrent.TimeUnit;
+import pages.login;
+import pages.loginNhanVien;
 
 public class Tests extends BaseTest {
     @Test
     public void testOne() throws Exception{
-            TaoYeuCau.TaoYeuCau();
+        login.login();
     }
+    @Test (dependsOnMethods = "testOne")
+    public void testTwo() throws Exception{
+        TaoYeuCau.TaoYeuCau();
+    }
+
 }

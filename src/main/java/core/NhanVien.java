@@ -3,7 +3,6 @@ package core;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -11,7 +10,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class BaseTest {
+public class NhanVien {
     protected static AppiumDriver<MobileElement> driver;
     protected static TouchAction touchAction;
 
@@ -22,12 +21,11 @@ public class BaseTest {
             cap.setCapability("udid", "192.168.61.101:5555");
             cap.setCapability("platformName", "Android");
             cap.setCapability("platformVersion", "12.1");
-            cap.setCapability("appPackage", "com.lcssoft.aloqtsc");
-            cap.setCapability("appActivity", "com.lcssoft.aloqtsc.MainActivity");
+            cap.setCapability("appPackage", "com.lcssoft.qtsctms");
+            cap.setCapability("appActivity", "com.lcssoft.qtsctms.MainActivity");
             URL url = new URL("http://127.0.0.1:4723/wd/hub");
             driver = new AppiumDriver<MobileElement>(url,cap);
             touchAction = new TouchAction(driver);
-
     }
 
     @Test

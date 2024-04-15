@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class NhanVien {
+public class NhanVien extends BaseTest {
     protected static AppiumDriver<MobileElement> driver;
     protected static TouchAction touchAction;
 
@@ -30,6 +30,7 @@ public class NhanVien {
 
     @Test
     public void sampleTest(){
+        System.out.println((systemDateTime));
         System.out.println(("I am inside sample Test"));
     }
 }

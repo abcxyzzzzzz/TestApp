@@ -5,6 +5,8 @@ import helper.locator;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.touch.offset.PointOption;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class TaoYeuCau extends BaseTest {
@@ -14,7 +16,7 @@ public class TaoYeuCau extends BaseTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         MobileElement sendNoiDung = driver.findElement(locator.NoiDungYeuCau);
         sendNoiDung.click();
-        sendNoiDung.sendKeys("giúp tôi sữa chữa nhé");
+        sendNoiDung.sendKeys(systemDateTime);
         MobileElement sendGhiChu = driver.findElement(locator.GhiChu);
         sendGhiChu.click();
         sendGhiChu.sendKeys("giúp tôi sữa chữa nhé");
@@ -31,5 +33,6 @@ public class TaoYeuCau extends BaseTest {
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
         driver.findElement(locator.LichSuYeuCau).click();
         touchAction.tap(PointOption.point(530, 350)).perform();
+
     }
 }

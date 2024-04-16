@@ -1,7 +1,7 @@
 package pages;
 
 import core.NhanVien;
-import helper.locator;
+import helper.Locator;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
@@ -22,7 +22,7 @@ public class DuyetYeuCau extends NhanVien {
         driver.findElement(By.xpath("//android.view.View[@content-desc=\"Nội dung\"]")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         MobileElement sendGhiChu = driver.findElement(By.xpath("//android.widget.EditText/android.widget.Button[1]"));
-        touchAction.tap(PointOption.point(483, 450)).perform();
+        touchAction.tap(PointOption.point(400, 350)).perform();
         sendGhiChu.sendKeys(systemDateTime);
         Thread.sleep(1000);
         touchAction.tap(PointOption.point(450, 730)).perform();

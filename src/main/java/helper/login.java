@@ -10,7 +10,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class login {
-    public static AppiumDriver<MobileElement> openApp() throws Exception {
+    public static AppiumDriver<MobileElement> OpenApp() throws Exception {
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setCapability("deviceName", "testmobilee");
         cap.setCapability("udid", "192.168.61.101:5555");

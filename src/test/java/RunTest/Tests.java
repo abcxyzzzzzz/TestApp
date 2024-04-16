@@ -2,17 +2,18 @@ package RunTest;
 
 import core.BaseTest;
 import org.testng.annotations.Test;
+import pages.Login;
 import pages.TaoYeuCau;
-import pages.login;
-import pages.loginNhanVien;
+import pages.Login;
+import pages.LoginNhanVien;
 
 public class Tests extends BaseTest {
     @Test
-    public void testOne() throws Exception{
-        login.login();
+    public void Test1() throws Exception{
+        Login.Login();
     }
-    @Test (dependsOnMethods = "testOne")
-    public void testTwo() throws Exception{
+    @Test (dependsOnMethods = "Test1")
+    public void TestTwo() throws Exception{
         TaoYeuCau.TaoYeuCau();
     }
 

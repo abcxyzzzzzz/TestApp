@@ -3,14 +3,14 @@ package RunTest;
 import core.NhanVien;
 import org.testng.annotations.Test;
 import pages.DuyetYeuCau;
-import pages.loginNhanVien;
+import pages.LoginNhanVien;
 
 public class TestNhanVien extends NhanVien {
     @Test
     public void Test() throws Exception{
         String taiKhoan = "nhanviencskh@qtsc.com.vn";
         String matKhau = "nhanviencskh";
-        loginNhanVien.loginNhanVien(taiKhoan,matKhau);
+        LoginNhanVien.LoginNhanVien(taiKhoan,matKhau);
     }
     @Test (dependsOnMethods = "Test")
     public void DuyetIssue() throws Exception {

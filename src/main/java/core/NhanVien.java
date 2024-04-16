@@ -15,7 +15,7 @@ public class NhanVien extends BaseTest {
     protected static TouchAction touchAction;
 
     @BeforeTest
-    public void setup() throws MalformedURLException {
+    public void SetUp() throws MalformedURLException {
             DesiredCapabilities cap = new DesiredCapabilities();
             cap.setCapability("deviceName", "testmobilee");
             cap.setCapability("udid", "192.168.61.101:5555");
@@ -29,7 +29,7 @@ public class NhanVien extends BaseTest {
     }
 
     @Test
-    public void sampleTest(){
+    public void SampleTest(){
         System.out.println((systemDateTime));
         System.out.println(("I am inside sample Test"));
     }

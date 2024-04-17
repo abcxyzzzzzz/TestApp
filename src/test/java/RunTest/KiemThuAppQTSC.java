@@ -5,15 +5,15 @@ import org.testng.annotations.Test;
 import pages.DuyetYeuCau;
 import pages.LoginNhanVien;
 
-public class TestNhanVien extends NhanVien {
+public class KiemThuAppQTSC extends NhanVien {
     @Test
-    public void Test() throws Exception{
+    public void KiemThuDangNhap() throws Exception{
         String taiKhoan = "nhanviencskh@qtsc.com.vn";
         String matKhau = "nhanviencskh";
         LoginNhanVien.LoginNhanVien(taiKhoan,matKhau);
     }
-    @Test (dependsOnMethods = "Test")
-    public void DuyetIssue() throws Exception {
+    @Test (dependsOnMethods = "KiemThuDangNhap")
+    public void DuyetYeuCau() throws Exception {
         DuyetYeuCau.DuyetYeuCau();
     }
 }

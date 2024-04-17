@@ -8,13 +8,13 @@
 
     <test name="Test Case 1">
         <classes>
-            <class name="RunTest.Tests"/>
+            <class name="RunTest.KiemThuAppAlo"/>
         </classes>
     </test>
 
     <test name="Test Case 2">
         <classes>
-            <class name="RunTest.TestNhanVien"/>
+            <class name="RunTest.KiemThuAppQTSC"/>
         </classes>
     </test>
 </suite>

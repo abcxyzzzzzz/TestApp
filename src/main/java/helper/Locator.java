@@ -16,5 +16,4 @@ public class Locator {
     public static final By GuiYeuCau = By.xpath("//android.widget.Button[@content-desc=\"Create issue\"]");
     public static final By DongYeuCau = By.xpath("//android.widget.Button[@content-desc=\"Close\"]");
     public static final By LichSuYeuCau = By.xpath("//android.view.View[@content-desc=\"History\"]");
-
 }

@@ -4,15 +4,13 @@ import core.BaseTest;
 import org.testng.annotations.Test;
 import pages.Login;
 import pages.TaoYeuCau;
-import pages.Login;
-import pages.LoginNhanVien;
 
-public class Tests extends BaseTest {
+public class KiemThuAppAlo extends BaseTest {
     @Test
-    public void Test1() throws Exception{
-        Login.Login();
+    public void KiemTraDangNhap() throws Exception{
+        Login.LoginRandomSDT();
     }
-    @Test (dependsOnMethods = "Test1")
+    @Test (dependsOnMethods = "KiemTraDangNhap")
     public void TestTwo() throws Exception{
         TaoYeuCau.TaoYeuCau();
     }

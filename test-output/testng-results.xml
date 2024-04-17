@@ -2,48 +2,48 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-16T14:23:42 ICT" name="MyTestSuite" finished-at="2024-04-16T14:24:43 ICT" duration-ms="61500">
+  <suite started-at="2024-04-17T11:41:25 ICT" name="MyTestSuite" finished-at="2024-04-17T11:42:52 ICT" duration-ms="86847">
     <groups>
     </groups>
-    <test started-at="2024-04-16T14:23:42 ICT" name="Test Case 1" finished-at="2024-04-16T14:24:19 ICT" duration-ms="37195">
-      <class name="RunTest.Tests">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:RunTest.Tests@4116aac9]" started-at="2024-04-16T14:23:42 ICT" name="SetUp" finished-at="2024-04-16T14:23:51 ICT" duration-ms="9429" status="PASS">
+    <test started-at="2024-04-17T11:41:25 ICT" name="Test Case 1" finished-at="2024-04-17T11:42:28 ICT" duration-ms="63136">
+      <class name="RunTest.KiemThuAppAlo">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:RunTest.KiemThuAppAlo@10683d9d]" started-at="2024-04-17T11:41:25 ICT" name="SetUp" finished-at="2024-04-17T11:41:38 ICT" duration-ms="12526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method signature="SampleTest()[pri:0, instance:RunTest.Tests@4116aac9]" started-at="2024-04-16T14:23:51 ICT" name="SampleTest" finished-at="2024-04-16T14:23:51 ICT" duration-ms="1" status="PASS">
+        <test-method signature="SampleTest()[pri:0, instance:RunTest.KiemThuAppAlo@10683d9d]" started-at="2024-04-17T11:41:38 ICT" name="SampleTest" finished-at="2024-04-17T11:41:38 ICT" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SampleTest -->
-        <test-method signature="Test1()[pri:0, instance:RunTest.Tests@4116aac9]" started-at="2024-04-16T14:23:51 ICT" name="Test1" finished-at="2024-04-16T14:23:58 ICT" duration-ms="6975" status="PASS">
+        <test-method signature="KiemTraDangNhap()[pri:0, instance:RunTest.KiemThuAppAlo@10683d9d]" started-at="2024-04-17T11:41:38 ICT" name="KiemTraDangNhap" finished-at="2024-04-17T11:42:06 ICT" duration-ms="28187" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test1 -->
-        <test-method signature="TestTwo()[pri:0, instance:RunTest.Tests@4116aac9]" started-at="2024-04-16T14:23:58 ICT" name="TestTwo" finished-at="2024-04-16T14:24:19 ICT" depends-on-methods="RunTest.Tests.Test1" duration-ms="20704" status="PASS">
+        </test-method> <!-- KiemTraDangNhap -->
+        <test-method signature="TestTwo()[pri:0, instance:RunTest.KiemThuAppAlo@10683d9d]" started-at="2024-04-17T11:42:06 ICT" name="TestTwo" finished-at="2024-04-17T11:42:28 ICT" depends-on-methods="RunTest.KiemThuAppAlo.KiemTraDangNhap" duration-ms="22337" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestTwo -->
-      </class> <!-- RunTest.Tests -->
+      </class> <!-- RunTest.KiemThuAppAlo -->
     </test> <!-- Test Case 1 -->
-    <test started-at="2024-04-16T14:24:19 ICT" name="Test Case 2" finished-at="2024-04-16T14:24:43 ICT" duration-ms="24302">
-      <class name="RunTest.TestNhanVien">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:RunTest.TestNhanVien@23348b5d]" started-at="2024-04-16T14:24:19 ICT" name="SetUp" finished-at="2024-04-16T14:24:29 ICT" duration-ms="9489" status="PASS">
+    <test started-at="2024-04-17T11:42:28 ICT" name="Test Case 2" finished-at="2024-04-17T11:42:52 ICT" duration-ms="23707">
+      <class name="RunTest.KiemThuAppQTSC">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:RunTest.KiemThuAppQTSC@45c7e403]" started-at="2024-04-17T11:42:28 ICT" name="SetUp" finished-at="2024-04-17T11:42:38 ICT" duration-ms="9764" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method signature="Test()[pri:0, instance:RunTest.TestNhanVien@23348b5d]" started-at="2024-04-16T14:24:29 ICT" name="Test" finished-at="2024-04-16T14:24:33 ICT" duration-ms="4557" status="PASS">
+        <test-method signature="KiemThuDangNhap()[pri:0, instance:RunTest.KiemThuAppQTSC@45c7e403]" started-at="2024-04-17T11:42:38 ICT" name="KiemThuDangNhap" finished-at="2024-04-17T11:42:42 ICT" duration-ms="3859" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test -->
-        <test-method signature="SampleTest()[pri:0, instance:RunTest.TestNhanVien@23348b5d]" started-at="2024-04-16T14:24:33 ICT" name="SampleTest" finished-at="2024-04-16T14:24:33 ICT" duration-ms="0" status="PASS">
+        </test-method> <!-- KiemThuDangNhap -->
+        <test-method signature="SampleTest()[pri:0, instance:RunTest.KiemThuAppQTSC@45c7e403]" started-at="2024-04-17T11:42:42 ICT" name="SampleTest" finished-at="2024-04-17T11:42:42 ICT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SampleTest -->
-        <test-method signature="DuyetIssue()[pri:0, instance:RunTest.TestNhanVien@23348b5d]" started-at="2024-04-16T14:24:33 ICT" name="DuyetIssue" finished-at="2024-04-16T14:24:43 ICT" depends-on-methods="RunTest.TestNhanVien.Test" duration-ms="10252" status="PASS">
+        <test-method signature="DuyetYeuCau()[pri:0, instance:RunTest.KiemThuAppQTSC@45c7e403]" started-at="2024-04-17T11:42:42 ICT" name="DuyetYeuCau" finished-at="2024-04-17T11:42:52 ICT" depends-on-methods="RunTest.KiemThuAppQTSC.KiemThuDangNhap" duration-ms="10081" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DuyetIssue -->
-      </class> <!-- RunTest.TestNhanVien -->
+        </test-method> <!-- DuyetYeuCau -->
+      </class> <!-- RunTest.KiemThuAppQTSC -->
     </test> <!-- Test Case 2 -->
   </suite> <!-- MyTestSuite -->
 </testng-results>

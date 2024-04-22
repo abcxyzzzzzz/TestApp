@@ -21,13 +21,17 @@ public class DuyetYeuCau extends NhanVien {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//android.view.View[@content-desc=\"Nội dung\"]")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        MobileElement sendGhiChu = driver.findElement(By.xpath("//android.widget.EditText/android.widget.Button[1]"));
+        //MobileElement sendGhiChu = driver.findElement(By.xpath("//android.widget.EditText/android.widget.Button[1]"));
         touchAction.tap(PointOption.point(400, 350)).perform();
-        sendGhiChu.sendKeys(systemDateTime);
+        //sendGhiChu.sendKeys(systemDateTime);
         Thread.sleep(1000);
         touchAction.tap(PointOption.point(450, 730)).perform();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"Receive\"]")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"Confirm\"]")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"Close\"]")).click();
     }
 
 }

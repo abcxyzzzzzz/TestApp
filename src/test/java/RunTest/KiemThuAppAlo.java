@@ -11,8 +11,7 @@ public class KiemThuAppAlo extends BaseTest {
         Login.LoginRandomSDT();
     }
     @Test (dependsOnMethods = "KiemTraDangNhap")
-    public void TestTwo() throws Exception{
+    public void TestTaoYeuCau() throws Exception{
         TaoYeuCau.TaoYeuCau();
     }
-
 }

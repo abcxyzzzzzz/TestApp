@@ -1,37 +1,37 @@
-package pages;
+package AppAlo;
 
 import core.BaseTest;
-import helper.locator;
+import AppAlo.Locator;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.touch.offset.PointOption;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class TaoYeuCau extends BaseTest {
     public static void TaoYeuCau() throws Exception {
-        Thread.sleep(1000);
-        driver.findElement(locator.TaoYeuCau).click();
+        Thread.sleep(2000);
+        touchAction.tap(PointOption.point(550, 1239)).perform();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        MobileElement sendNoiDung = driver.findElement(locator.NoiDungYeuCau);
+        driver.findElement(Locator.TaoYeuCau).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        MobileElement sendNoiDung = driver.findElement(Locator.NoiDungYeuCau);
         sendNoiDung.click();
         sendNoiDung.sendKeys(systemDateTime);
-        MobileElement sendGhiChu = driver.findElement(locator.GhiChu);
+        MobileElement sendGhiChu = driver.findElement(Locator.GhiChu);
         sendGhiChu.click();
         sendGhiChu.sendKeys("giúp tôi sữa chữa nhé");
-        driver.findElement(locator.ThemHinhAnh).click();
-        driver.findElement(locator.ChonThemHinhAnh).click();
+        driver.findElement(Locator.ThemHinhAnh).click();
+        driver.findElement(Locator.ChonThemHinhAnh).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(locator.ChapNhanQuyen).click();
+        driver.findElement(Locator.ChapNhanQuyen).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(locator.ChonHinhAnh).click();
+        driver.findElement(Locator.ChonHinhAnh).click();
         Thread.sleep(1000);
-        driver.findElement(locator.GuiYeuCau).click();
+        driver.findElement(Locator.GuiYeuCau).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(locator.DongYeuCau).click();
+        driver.findElement(Locator.DongYeuCau).click();
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-        driver.findElement(locator.LichSuYeuCau).click();
+        driver.findElement(Locator.LichSuYeuCau).click();
         touchAction.tap(PointOption.point(530, 350)).perform();
 
     }

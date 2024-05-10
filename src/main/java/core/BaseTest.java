@@ -13,26 +13,46 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * Base class for all test cases
+ */
 public class BaseTest {
+    /**
+     * Driver for Appium sessions
+     */
     protected static AppiumDriver<MobileElement> driver;
+    /**
+     * TouchAction object for interacting with the Appium session
+     */
     protected static TouchAction touchAction;
+    /**
+     * Current system date and time
+     */
     protected static String systemDateTime;
+    /**
+     * Random cell phone number generated using the Faker library
+     */
     protected static String soDienThoai;
+    /**
+     * Random full name generated using the Faker library
+     */
     protected static String HoTen;
+    /**
+     * Random email address generated using the Faker library
+     */
     protected static String Email;
     @BeforeTest
     public void SetUp() throws MalformedURLException {
-        // Set up the DesiredCapabilities for the Appium session
-        // This includes the deviceName, udid, platformName, platformVersion,
-        // appPackage, and appActivity
+        // Cấu hình cho session Appium
+        // Includes deviceName, udid, platformName, platformVersion, appPackage, and appActivity
         DesiredCapabilities cap = new DesiredCapabilities();
-        cap.setCapability("deviceName", "Pixel XL"); // Set the device name to Pixel XL
-        cap.setCapability("udid", "192.168.52.103:5555"); // Set the udid to 192.168.52.103:5555
-        cap.setCapability("platformName", "Android"); // Set the platformName to Android
-        cap.setCapability("platformVersion", "13"); // Set the platformVersion to 13
-        cap.setCapability("appPackage", "com.lcssoft.aloqtsc"); // Set the appPackage to com.lcssoft.aloqtsc
-        cap.setCapability("appActivity", "com.lcssoft.aloqtsc.MainActivity"); // Set the appActivity to com.lcssoft.aloqtsc.MainActivity
-        URL url = new URL("http://127.0.0.1:4723/wd/hub"); // Set the URL to the Appium server
+        cap.setCapability("deviceName", "Pixel XL"); // tên thiết bị
+        cap.setCapability("udid", "192.168.52.103:5555"); // udid của thiết bị
+        cap.setCapability("platformName", "Android"); // hệ điều hành
+        cap.setCapability("platformVersion", "13"); // phiên bản hệ điều hành
+        cap.setCapability("appPackage", "com.lcssoft.aloqtsc"); // gói ứng dụng
+        cap.setCapability("appActivity", "com.lcssoft.aloqtsc.MainActivity"); // Activity mặc định
+        URL url = new URL("http://127.0.0.1:4723/wd/hub"); // URL đến Appium server
 
         driver = new AppiumDriver<MobileElement>(url,cap);
         touchAction = new TouchAction(driver);
@@ -40,22 +60,22 @@ public class BaseTest {
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         systemDateTime = formatter.format(new Date());
 
-        // Generate fake data using the Faker library
+        // Tạo dữ liệu ngẫu nhiên bằng library Faker
         Faker faker = new Faker();
 
-        // Generate a random cell phone number and assign it to soDienThoai
+        // Tạo một số điện thoại ngẫu nhiên và gán nó cho soDienThoai
         soDienThoai = faker.phoneNumber().cellPhone();
 
-        // Generate a random full name and assign it to HoTen
+        // Tạo một tên đầy đủ ngẫu nhiên và gán nó cho HoTen
         HoTen = faker.name().fullName();
 
-        // Generate a random email address and assign it to Email
+        // Tạo một địa chỉ email ngẫu nhiên và gán nó cho Email
         Email = faker.internet().emailAddress();
     }
 
     @Test
     public void SampleTest() {
-        System.out.println("I am inside sample Test");
+        System.out.println("Tôi đang trong sample Test");
         System.out.println("Số điện thoại ngẫu nhiên: " + soDienThoai);
     }
 }

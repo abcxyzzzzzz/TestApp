@@ -1,11 +1,8 @@
-package pages;
+package AppAlo;
 
 import core.BaseTest;
-import helper.Locator;
-import helper.LocatorRegister;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.touch.offset.PointOption;
-import org.openqa.selenium.By;
 
 import java.util.concurrent.TimeUnit;
 
@@ -30,41 +27,41 @@ public class Login extends BaseTest {
         Thread.sleep(1000);
         driver.findElement(Locator.Next).click();
         //Tiến hành đăng ký
-        driver.findElement(LocatorRegister.DienTen).click();
-        driver.findElement(LocatorRegister.DienTen).sendKeys(HoTen);
+        driver.findElement(Locator.DienTen).click();
+        driver.findElement(Locator.DienTen).sendKeys(HoTen);
         //Chọn công ty
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(LocatorRegister.CongTy).click();
+        driver.findElement(Locator.CongTy).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(LocatorRegister.TenCongTy).click();
+        driver.findElement(Locator.TenCongTy).click();
         //Điền Email
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(LocatorRegister.Email).click();
-        driver.findElement(LocatorRegister.Email).sendKeys(Email);
+        driver.findElement(Locator.Email).click();
+        driver.findElement(Locator.Email).sendKeys(Email);
         //Điền giới tính
-        driver.findElement(LocatorRegister.GioiTinh).click();
+        driver.findElement(Locator.GioiTinh).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(LocatorRegister.ChonGioiTinh).click();
+        driver.findElement(Locator.ChonGioiTinh).click();
         //Điền ngày tháng năm sinh
-        driver.findElement(LocatorRegister.NgayThangNam).click();
+        driver.findElement(Locator.NgayThangNam).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(LocatorRegister.ChonNgayThangNam).click();
+        driver.findElement(Locator.ChonNgayThangNam).click();
         //Điền quê quán
-        driver.findElement(LocatorRegister.QueQuan).click();
+        driver.findElement(Locator.QueQuan).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(LocatorRegister.ChonQueQuan).click();
+        driver.findElement(Locator.ChonQueQuan).click();
         //Điền chức vụ
         Thread.sleep(500);
-        touchAction.tap(PointOption.point(980, 1650)).perform();
+        touchAction.tap(PointOption.point(430, 1845)).perform();
         Thread.sleep(500);
         touchAction.tap(PointOption.point(300, 1700)).perform();
 
         //ClickButton
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(LocatorRegister.TaoTaiKhoanButton).click();
+        driver.findElement(Locator.TaoTaiKhoanButton).click();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(LocatorRegister.DongGiaoDienDangKy).click();
+        driver.findElement(Locator.DongGiaoDienDangKy).click();
 
     }
 }

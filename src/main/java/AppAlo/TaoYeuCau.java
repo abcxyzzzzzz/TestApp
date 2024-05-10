@@ -1,17 +1,17 @@
-package pages;
+package AppAlo;
 
 import core.BaseTest;
-import helper.Locator;
+import AppAlo.Locator;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.touch.offset.PointOption;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class TaoYeuCau extends BaseTest {
     public static void TaoYeuCau() throws Exception {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
+        touchAction.tap(PointOption.point(550, 1239)).perform();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(Locator.TaoYeuCau).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         MobileElement sendNoiDung = driver.findElement(Locator.NoiDungYeuCau);
